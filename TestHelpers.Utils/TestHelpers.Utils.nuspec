@@ -1,16 +1,20 @@
 ﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>TestHelpers.Utils</id>
-    <version>1.0.0</version>
-    <title>TestHelpers.Utils</title>
-    <authors>Patrik Olausson</authors>
-    <owners>Patrik Olausson</owners>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <tags>TestHelpers TestHelpers.Utils</tags>
+    <description>$description$</description>
+    <copyright>$copyright$</copyright>
     <licenseUrl>https://github.com/patrik-olausson/TestHelpers.Utils/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/patrik-olausson/TestHelpers.Utils</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Some useful helper classes for simplifying testing of ASP.NET Web Api 2 using Owin test server</description>
-    <summary></summary>
     <language>en-US</language>
+    <!--<dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.2"/>
+    </dependencies>-->
   </metadata>
 </package>
