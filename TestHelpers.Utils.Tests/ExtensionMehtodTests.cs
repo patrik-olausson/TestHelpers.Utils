@@ -1,4 +1,5 @@
-﻿using TestHelpers.Utils;
+﻿using FluentAssertions;
+using TestHelpers.Utils;
 using Xunit;
 
 namespace ExtensionMehtodTests
@@ -43,6 +44,23 @@ namespace ExtensionMehtodTests
             var result = value.ReplaceAllMatches("[CB]at", "Replaced");
 
             Assert.Equal("Replaced, Hat, Replaced", result);
+        }
+    }
+
+    public class AsDate
+    {
+        [Theory]
+        [InlineData("2018-07-01","2018-07-01")]
+        [InlineData("2018-07-01 12:00", "2018-07-01")]
+        [InlineData("2018/07/01","2018-07-01")]
+        [InlineData("18/07/01", "2018-07-01")]
+        public void GivenAStringRepresentationOfDate_ThenADateTimeOffsetInstanceIsReturned(string input, string expectedParsedOutput)
+        {
+            var parsedDate = input.AsDate();
+
+            var resultInSpecificFormat = parsedDate.ToString("yyyy-MM-dd");
+
+            resultInSpecificFormat.Should().BeEquivalentTo(expectedParsedOutput);
         }
     }
 }
