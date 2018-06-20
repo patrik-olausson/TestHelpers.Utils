@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace TestHelpers.Utils
@@ -32,6 +33,11 @@ namespace TestHelpers.Utils
         public static T FromJsonString<T>(this string jsonContent)
         {
             return JsonConvert.DeserializeObject<T>(jsonContent);
+        }
+
+        public static DateTimeOffset AsDate(this string dateString)
+        {
+            return DateTimeOffset.Parse(dateString);
         }
     }
 }
