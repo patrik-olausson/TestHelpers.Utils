@@ -50,6 +50,7 @@
     <Compile Include="Creation\AnCreator.cs" />
     <Compile Include="Creation\Create.cs" />
     <Compile Include="Creation\DateSpecification.cs" />
+    <Compile Include="Creation\DateTimeOffsetModifier.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
