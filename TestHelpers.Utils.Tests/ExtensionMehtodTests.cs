@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using System;
 using TestHelpers.Utils;
 using Xunit;
 
@@ -50,10 +51,9 @@ namespace ExtensionMehtodTests
     public class AsDate
     {
         [Theory]
-        [InlineData("2018-07-01","2018-07-01")]
+        [InlineData("2018-07-01", "2018-07-01")]
         [InlineData("2018-07-01 12:00", "2018-07-01")]
-        [InlineData("2018/07/01","2018-07-01")]
-        [InlineData("18/07/01", "2018-07-01")]
+        [InlineData("2018/07/01", "2018-07-01")]
         public void GivenAStringRepresentationOfDate_ThenADateTimeOffsetInstanceIsReturned(string input, string expectedParsedOutput)
         {
             var parsedDate = input.AsDate();
@@ -61,6 +61,15 @@ namespace ExtensionMehtodTests
             var resultInSpecificFormat = parsedDate.ToString("yyyy-MM-dd");
 
             resultInSpecificFormat.Should().BeEquivalentTo(expectedParsedOutput);
+        }
+
+        [Theory]
+        [InlineData("notadate")]
+        public void GivenAnInvalidStringRepresentationOfDate_ThenAnExceptionIsThrownWithExamplesOfValidStrings(string input)
+        {
+            var exception = Assert.Throws<FormatException>(() => input.AsDate());
+
+            exception.Message.Should().Be($"{input} is not a valid date. Supported date formats include yyyy-MM-dd, yyyy-MM-dd HH:mm:ss, yyyy/MM/dd.");
         }
     }
 }
