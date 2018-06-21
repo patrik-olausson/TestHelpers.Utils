@@ -7,7 +7,7 @@ namespace CreateATests
     public class SetOf
     {
         [Fact]
-        public void GivenTwoItems_ReturnsCollectionOfItems()
+        public void GivenTwoItems_ThenACollectionOfItemsIsReturned()
         {
             var set = Create.A.SetOf("Foo", "Bar");
 
@@ -15,7 +15,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenNoItems_ReturnsEmptyCollection()
+        public void GivenNoItems_ThenAnEmptyCollectionIsReturned()
         {
             var set = Create.A.SetOf<string>();
 

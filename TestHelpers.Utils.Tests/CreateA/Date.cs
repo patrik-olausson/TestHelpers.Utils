@@ -12,7 +12,7 @@ namespace CreateATests
     public class Date
     {
         [Fact]
-        public void GivenTwoDaysBeforeADate_ReturnsADateTwoDaysBeforeSuppliedDate()
+        public void GivenTwoDaysBeforeADate_ThenADateTwoDaysBeforeSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Days.Before("2015-01-01".AsDate());
 
@@ -20,7 +20,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoDaysAfterADate_ReturnsADateTwoDaysAfterSuppliedDate()
+        public void GivenTwoDaysAfterADate_ThenADateTwoDaysAfterSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Days.After("2015-01-01".AsDate());
 
@@ -28,7 +28,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoWeeksBeforeADate_ReturnsADateTwoWeeksBeforeSuppliedDate()
+        public void GivenTwoWeeksBeforeADate_ThenADateTwoWeeksBeforeSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Weeks.Before("2015-01-01".AsDate());
 
@@ -36,7 +36,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoWeeksAfterADate_ReturnsADateTwoWeeksAfterSuppliedDate()
+        public void GivenTwoWeeksAfterADate_ThenADateTwoWeeksAfterSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Weeks.After("2015-01-01".AsDate());
 
@@ -44,7 +44,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoDaysBeforeAStringDate_ReturnsADateTwoDaysBeforeSuppliedDate()
+        public void GivenTwoDaysBeforeAStringDate_ThenADateTwoDaysBeforeSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Days.Before("2015-01-01");
 
@@ -52,7 +52,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoDaysAfterAStringDate_ReturnsADateTwoDaysAfterSuppliedDate()
+        public void GivenTwoDaysAfterAStringDate_ThenADateTwoDaysAfterSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Days.After("2015-01-01");
 
@@ -60,7 +60,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoYearsBeforeADate_ReturnsADateTwoYearsBeforeSuppliedDate()
+        public void GivenTwoYearsBeforeADate_ThenADateTwoYearsBeforeSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Years.Before("2015-01-01".AsDate());
 
@@ -68,7 +68,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoYearsAfterADate_ReturnsADateTwoYearsAfterSuppliedDate()
+        public void GivenTwoYearsAfterADate_ThenADateTwoYearsAfterSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Years.After("2015-01-01".AsDate());
 
@@ -76,7 +76,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoMonthsBeforeADate_ReturnsADateTwoYearsMonthsSuppliedDate()
+        public void GivenTwoMonthsBeforeADate_ThenADateTwoMonthsBeforeSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Months.Before("2015-01-01".AsDate());
 
@@ -84,7 +84,7 @@ namespace CreateATests
         }
 
         [Fact]
-        public void GivenTwoMonthsAfterADate_ReturnsADateTwoMonthsAfterSuppliedDate()
+        public void GivenTwoMonthsAfterADate_ThenADateTwoMonthsAfterSuppliedDateIsReturned()
         {
             var result = Create.A.Date(2).Months.After("2015-01-01".AsDate());
 
