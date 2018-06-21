@@ -37,7 +37,11 @@ namespace TestHelpers.Utils
 
         public static DateTimeOffset AsDate(this string dateString)
         {
-            return DateTimeOffset.Parse(dateString);
+            DateTimeOffset result;
+            if (DateTimeOffset.TryParse(dateString, out result))
+                return result;
+            else
+                throw new FormatException($"{dateString} is not a valid date. Supported date formats include yyyy-MM-dd, yyyy-MM-dd HH:mm:ss, yyyy/MM/dd.");
         }
     }
 }
