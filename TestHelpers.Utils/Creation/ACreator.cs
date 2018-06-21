@@ -15,6 +15,4 @@ namespace TestHelpers.Utils
             return items;
         }
     }
-
-    
 }

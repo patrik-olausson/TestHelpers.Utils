@@ -8,7 +8,5 @@ namespace TestHelpers.Utils
     {
         public static ACreator A => new ACreator();
         public static AnCreator An => new AnCreator();
-    }
-
-    
+    }    
 }
