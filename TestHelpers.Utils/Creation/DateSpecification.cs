@@ -2,7 +2,8 @@
 {
     public class DateBuilder
     {
-        private int offset;
+        private readonly int offset;
+        private const int DaysInAWeek = 7;
 
         public DateBuilder(int offset)
         {
