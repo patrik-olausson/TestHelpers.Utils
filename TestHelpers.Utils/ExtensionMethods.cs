@@ -43,5 +43,10 @@ namespace TestHelpers.Utils
             else
                 throw new FormatException($"{dateString} is not a valid date. Supported date formats include yyyy-MM-dd, yyyy-MM-dd HH:mm:ss, yyyy/MM/dd.");
         }
+
+        public static bool HasValue(this string value)
+        {
+            return !string.IsNullOrWhiteSpace(value);
+        }
     }
 }
